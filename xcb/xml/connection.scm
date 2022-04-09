@@ -18,6 +18,7 @@
   #:use-module (srfi srfi-1)
   #:use-module (srfi srfi-2)
   #:use-module (srfi srfi-9 gnu)
+  #:use-module (srfi srfi-18)
   #:use-module (ice-9 binary-ports)
   #:use-module (ice-9 receive)
   #:use-module (rnrs bytevectors)
@@ -171,7 +172,7 @@
   (if (and max-length (> length max-length))
       (error "xml-xcb: Request length too long for X server: " length))
   (dynamic-wind
-    (lambda () (while (not (try-mutex mutex))))
+    (lambda () (mutex-lock! mutex))
     (lambda ()
       (put-u8 buffer major-opcode)
       (if minor-opcode (put-u8 buffer minor-opcode)
@@ -192,7 +193,7 @@
         (set-next-request-number!
          xcb-conn (logand max-uint16 (+ request-number 1)))
         request-number))
-    (lambda () (unlock-mutex mutex))))
+    (lambda () (mutex-unlock! mutex))))
 
 (define-public (mock-connection server-bytes events errors)
   (receive (buffer-port get-buffer-bytevector)
@@ -310,7 +311,7 @@
   (define sock (xcb-connection-socket xcb-conn))
 
   (dynamic-wind
-    (lambda () (while (not (try-mutex mutex))))
+    (lambda () (mutex-lock! mutex))
     (lambda ()
      (receive (data-type data)
          (if (or (not async?) (file-ready? (port->fdes sock)))
@@ -326,7 +327,8 @@
                                        (read-event sock next-byte)))))))
              (values 'none #f))
        (values data-type data)))
-    (lambda () (unlock-mutex mutex))))
+    (lambda () (mutex-unlock! mutex))
+    ))
 
 (define-public (xcb-struct data)
   "-- Scheme Procedure: xcb-struct data
