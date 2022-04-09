@@ -20,7 +20,6 @@
 ##   Street, Fifth Floor, Boston, MA 02110-1301 USA
 
 AUTOMAKE_OPTIONS = -Wno-portability
-ACLOCAL_AMFLAGS = -I ./m4
 
 %.go : %.xml language/xml-xcb/compile-scheme.go language/xml-xcb/spec.go xcb/xml/records.go
 	GUILE_FLAGS="-C ${CURDIR}" @GUILE_TOOLS@ compile $< --from=xml-xcb --output=$@
@@ -32,7 +31,12 @@ CLEANFILES = xcb/xml/ext/*.go xcb/xml/*.go language/xml-xcb/*.go flow/*.go xcb/*
 
 info_TEXINFOS = guile-xcb.texi
 
-godir = $(guilesiteccachedir)
+guile_install_go_files = install-nobase_goDATA
+$(guile_install_go_files): install-nobase_modDATA
+
+moddir=$(prefix)/share/guile/site/$(GUILE_EFFECTIVE_VERSION)
+godir=$(libdir)/guile/$(GUILE_EFFECTIVE_VERSION)/site-ccache
+
 nobase_go_DATA =                          \
   flow/event-loop.go                      \
   xcb/xml/records.go                      \
@@ -79,8 +83,7 @@ nobase_go_DATA =                          \
   xcb/xml/ext/xvmc.go                     \
   xcb/event-loop.go
 
-scmdir = $(guilesitedir)
-nobase_dist_scm_DATA =                    \
+nobase_mod_DATA =                    \
   flow/event-loop.scm                     \
   xcb/xml/records.scm                     \
   xcb/xml/enum.scm                        \
