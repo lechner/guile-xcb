@@ -20,6 +20,11 @@
 ##   not, write to the Free Software Foundation, Inc., 51 Franklin
 ##   Street, Fifth Floor, Boston, MA 02110-1301 USA
 
-SUBDIRS = flow language xcb
+destination = xcb/sample
 
-info_TEXINFOS = guile-xcb.texi
+moduledir=$(GUILE_SITE)/$(destination)
+
+module_DATA =                      \
+  tinywm.scm                       \
+  randr.scm                        \
+  win.scm

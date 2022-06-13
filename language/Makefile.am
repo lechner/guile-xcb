@@ -20,6 +20,4 @@
 ##   not, write to the Free Software Foundation, Inc., 51 Franklin
 ##   Street, Fifth Floor, Boston, MA 02110-1301 USA
 
-SUBDIRS = flow language xcb
-
-info_TEXINFOS = guile-xcb.texi
+SUBDIRS = xml-xcb

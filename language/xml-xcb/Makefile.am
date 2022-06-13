@@ -20,6 +20,20 @@
 ##   not, write to the Free Software Foundation, Inc., 51 Franklin
 ##   Street, Fifth Floor, Boston, MA 02110-1301 USA
 
-SUBDIRS = flow language xcb
+%.go : %.scm
+	@GUILE_TOOLS@ compile $< --output=$@ -L "@abs_top_srcdir@"
 
-info_TEXINFOS = guile-xcb.texi
+CLEANFILES = *.go
+
+destination = language/xml-xcb
+
+moduledir=$(GUILE_SITE)/$(destination)
+bytecodedir=$(GUILE_SITE_CCACHE)/$(destination)
+
+bytecode_DATA =                    \
+  support.go                       \
+  compile-scheme.go                \
+  spec.go
+
+module_DATA =                                 \
+  $(patsubst(%.go, %.scm, $(bytecode_DATA)))

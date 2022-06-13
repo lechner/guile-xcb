@@ -15,6 +15,12 @@ GUILE_SITE_DIR
 
 AC_CONFIG_FILES([
         Makefile
+        flow/Makefile
+        language/Makefile
+        language/xml-xcb/Makefile
+        xcb/Makefile
+        xcb/sample/Makefile
+        xcb/xml/Makefile
 ])
 
 AC_OUTPUT
