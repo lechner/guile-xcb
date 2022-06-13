@@ -1,6 +1,7 @@
 ## Process this file with automake to produce Makefile.in.
 ##
-##  	Copyright (C) 2013 Mark Witmer
+##  	Copyright © 2013 Mark Witmer
+##  	Copyright © 2022 Felix Lechner
 ##
 ##   This file is part of guile-xcb.
 ##
@@ -31,13 +32,13 @@ CLEANFILES = xcb/xml/*.go language/xml-xcb/*.go flow/*.go xcb/*.go
 
 info_TEXINFOS = guile-xcb.texi
 
-guile_install_go_files = install-nobase_goDATA
-$(guile_install_go_files): install-nobase_modDATA
+guile_install_bytecode_files = install-nobase_bytecodeDATA
+$(guile_install_bytecode_files): install-nobase_moduleDATA
 
-moddir=$(prefix)/share/guile/site/$(GUILE_EFFECTIVE_VERSION)
-godir=$(libdir)/guile/$(GUILE_EFFECTIVE_VERSION)/site-ccache
+moduledir=$(GUILE_SITE)
+bytecodedir=$(GUILE_SITE_CCACHE)
 
-nobase_go_DATA =                          \
+nobase_bytecode_DATA =                          \
   flow/event-loop.go                      \
   xcb/records.go                          \
   xcb/enum.go                             \
@@ -83,7 +84,7 @@ nobase_go_DATA =                          \
   xcb/xml/xvmc.go                         \
   xcb/event-loop.go
 
-nobase_mod_DATA =                    \
+nobase_module_DATA =                    \
   flow/event-loop.scm                     \
   xcb/records.scm                         \
   xcb/enum.scm                            \
