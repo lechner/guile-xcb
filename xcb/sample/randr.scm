@@ -44,7 +44,7 @@
 ;;; (xrandr 'resolution "VGA-0" 1680 1050 'offset "DVI-0" 1680 0)
 ;;; Set the resolution of monitor VGA-0 to 1680x1050 and move DVI-0 to (1680, 0)
 
-(define-module (xcb xml sample randr)
+(define-module (xcb sample randr)
   #:use-module (srfi srfi-1)
   #:use-module (ice-9 curried-definitions)
   #:use-module (ice-9 format)

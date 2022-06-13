@@ -27,7 +27,7 @@
 ;;; Add a line like this to your .xinitrc to use this window manager:
 ;;; exec guile -s /PATH/TO/tinywm.scm
 
-(define-module (xcb xml sample tinywm)
+(define-module (xcb sample tinywm)
   #:use-module (system repl server)
   #:use-module (xcb xml xproto)
   #:use-module (xcb event-loop)

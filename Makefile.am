@@ -94,9 +94,9 @@ nobase_mod_DATA =                    \
   xcb/xml/doc.scm                         \
   xcb/xml/test.scm                        \
   xcb/xml/switch-test.scm                 \
-  xcb/xml/sample/tinywm.scm               \
-  xcb/xml/sample/randr.scm                \
-  xcb/xml/sample/win.scm                  \
+  xcb/sample/tinywm.scm                   \
+  xcb/sample/randr.scm                    \
+  xcb/sample/win.scm                      \
   xcb/xml/connection.scm                  \
   language/xml-xcb/compile-scheme.scm     \
   language/xml-xcb/spec.scm               \

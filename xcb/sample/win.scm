@@ -17,7 +17,7 @@
 ;;; window with white background and display the keycodes of
 ;;; key-presses and key-releases inside it. Press <ESC> to quit.
 
-(define-module (xcb xml sample win)
+(define-module (xcb sample win)
   #:use-module (xcb xml)
   #:use-module (xcb event-loop)
   #:use-module (xcb xml xproto))

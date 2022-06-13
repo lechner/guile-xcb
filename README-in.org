@@ -17,7 +17,7 @@ asynchronous event loops.
 
 * Samples and Documentation
 
-Samples using Guile XCB can be found in the xcb/xml/samples
+Samples using Guile XCB can be found in the xcb/sample
 directory. They include:
 
 - tinywm.scm: A Guile XCB implementation of tinywm
