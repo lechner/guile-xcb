@@ -863,7 +863,7 @@
             (language xml-xcb support)
             ,@(if (not (eq? header-symbol 'xproto))
                   '((xcb xml xproto)
-                    (xcb xml ext-support)) '()))
+                    (xcb xml extension-support)) '()))
            (define extension-opcode #f)
            (define xcb-events (make-hash-table))
            (define xcb-errors (make-hash-table))

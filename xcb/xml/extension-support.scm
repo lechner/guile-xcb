@@ -13,7 +13,7 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml ext-support)
+(define-module (xcb xml extension-support)
   #:use-module (xcb xml connection)
   #:use-module (xcb xml type)
   #:use-module ((xcb xml core) #:select (xref))

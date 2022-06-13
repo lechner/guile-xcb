@@ -51,7 +51,7 @@ nobase_go_DATA =                          \
   language/xml-xcb/spec.go                \
   xcb/xml/xproto.go                       \
   xcb/xml/core.go                         \
-  xcb/xml/ext-support.go                  \
+  xcb/xml/extension-support.go            \
   xcb/xml/ext/bigreq.go                   \
   xcb/xml/ext/ge.go                       \
   xcb/xml/ext/xc_misc.go                  \
@@ -102,7 +102,7 @@ nobase_mod_DATA =                    \
   language/xml-xcb/spec.scm               \
   xcb/xml/xproto.xml                      \
   xcb/xml/core.scm                        \
-  xcb/xml/ext-support.scm                 \
+  xcb/xml/extension-support.scm           \
   xcb/xml/ext/bigreq.xml                  \
   xcb/xml/ext/ge.xml                      \
   xcb/xml/ext/xc_misc.xml                 \
