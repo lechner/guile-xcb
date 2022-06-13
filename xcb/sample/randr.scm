@@ -53,7 +53,7 @@
   #:use-module (xcb xml)
   #:use-module (xcb event-loop)
   #:use-module (xcb xml xproto)
-  #:use-module (xcb xml ext randr)
+  #:use-module (xcb xml randr)
   #:export (xrandr))
 
 ;; Handling modes

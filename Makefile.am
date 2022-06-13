@@ -27,7 +27,7 @@ AUTOMAKE_OPTIONS = -Wno-portability
 %.go : %.scm
 	GUILE_FLAGS="-C ${CURDIR}" @GUILE_TOOLS@ compile $< --output=$@
 
-CLEANFILES = xcb/xml/ext/*.go xcb/xml/*.go language/xml-xcb/*.go flow/*.go xcb/*.go
+CLEANFILES = xcb/xml/*.go language/xml-xcb/*.go flow/*.go xcb/*.go
 
 info_TEXINFOS = guile-xcb.texi
 
@@ -52,35 +52,35 @@ nobase_go_DATA =                          \
   xcb/xml/xproto.go                       \
   xcb/core.go                             \
   xcb/extension-support.go                \
-  xcb/xml/ext/bigreq.go                   \
-  xcb/xml/ext/ge.go                       \
-  xcb/xml/ext/xc_misc.go                  \
+  xcb/xml/bigreq.go                       \
+  xcb/xml/ge.go                           \
+  xcb/xml/xc_misc.go                      \
   xcb/auth.go                             \
   xcb/xml.go                              \
-  xcb/xml/ext/render.go                   \
-  xcb/xml/ext/randr.go                    \
-  xcb/xml/ext/dri2.go                     \
-  xcb/xml/ext/shape.go                    \
-  xcb/xml/ext/xfixes.go                   \
-  xcb/xml/ext/composite.go                \
-  xcb/xml/ext/damage.go                   \
-  xcb/xml/ext/dpms.go                     \
-  xcb/xml/ext/glx.go                      \
-  xcb/xml/ext/record.go                   \
-  xcb/xml/ext/res.go                      \
-  xcb/xml/ext/screensaver.go              \
-  xcb/xml/ext/shm.go                      \
-  xcb/xml/ext/sync.go                     \
-  xcb/xml/ext/xevie.go                    \
-  xcb/xml/ext/xf86dri.go                  \
-  xcb/xml/ext/xf86vidmode.go              \
-  xcb/xml/ext/xinerama.go                 \
-  xcb/xml/ext/xinput.go                   \
-  xcb/xml/ext/xkb.go                      \
-  xcb/xml/ext/xselinux.go                 \
-  xcb/xml/ext/xtest.go                    \
-  xcb/xml/ext/xv.go                       \
-  xcb/xml/ext/xvmc.go                     \
+  xcb/xml/render.go                       \
+  xcb/xml/randr.go                        \
+  xcb/xml/dri2.go                         \
+  xcb/xml/shape.go                        \
+  xcb/xml/xfixes.go                       \
+  xcb/xml/composite.go                    \
+  xcb/xml/damage.go                       \
+  xcb/xml/dpms.go                         \
+  xcb/xml/glx.go                          \
+  xcb/xml/record.go                       \
+  xcb/xml/res.go                          \
+  xcb/xml/screensaver.go                  \
+  xcb/xml/shm.go                          \
+  xcb/xml/sync.go                         \
+  xcb/xml/xevie.go                        \
+  xcb/xml/xf86dri.go                      \
+  xcb/xml/xf86vidmode.go                  \
+  xcb/xml/xinerama.go                     \
+  xcb/xml/xinput.go                       \
+  xcb/xml/xkb.go                          \
+  xcb/xml/xselinux.go                     \
+  xcb/xml/xtest.go                        \
+  xcb/xml/xv.go                           \
+  xcb/xml/xvmc.go                         \
   xcb/event-loop.go
 
 nobase_mod_DATA =                    \
@@ -103,33 +103,33 @@ nobase_mod_DATA =                    \
   xcb/xml/xproto.xml                      \
   xcb/core.scm                            \
   xcb/extension-support.scm               \
-  xcb/xml/ext/bigreq.xml                  \
-  xcb/xml/ext/ge.xml                      \
-  xcb/xml/ext/xc_misc.xml                 \
+  xcb/xml/bigreq.xml                      \
+  xcb/xml/ge.xml                          \
+  xcb/xml/xc_misc.xml                     \
   xcb/auth.scm                            \
   xcb/xml.scm                             \
-  xcb/xml/ext/render.xml                  \
-  xcb/xml/ext/randr.xml                   \
-  xcb/xml/ext/dri2.xml                    \
-  xcb/xml/ext/shape.xml                   \
-  xcb/xml/ext/xfixes.xml                  \
-  xcb/xml/ext/composite.xml               \
-  xcb/xml/ext/damage.xml                  \
-  xcb/xml/ext/dpms.xml                    \
-  xcb/xml/ext/glx.xml                     \
-  xcb/xml/ext/record.xml                  \
-  xcb/xml/ext/res.xml                     \
-  xcb/xml/ext/screensaver.xml             \
-  xcb/xml/ext/shm.xml                     \
-  xcb/xml/ext/sync.xml                    \
-  xcb/xml/ext/xevie.xml                   \
-  xcb/xml/ext/xf86dri.xml                 \
-  xcb/xml/ext/xf86vidmode.xml             \
-  xcb/xml/ext/xinerama.xml                \
-  xcb/xml/ext/xinput.xml                  \
-  xcb/xml/ext/xkb.xml                     \
-  xcb/xml/ext/xselinux.xml                \
-  xcb/xml/ext/xtest.xml                   \
-  xcb/xml/ext/xv.xml                      \
-  xcb/xml/ext/xvmc.xml                    \
+  xcb/xml/render.xml                      \
+  xcb/xml/randr.xml                       \
+  xcb/xml/dri2.xml                        \
+  xcb/xml/shape.xml                       \
+  xcb/xml/xfixes.xml                      \
+  xcb/xml/composite.xml                   \
+  xcb/xml/damage.xml                      \
+  xcb/xml/dpms.xml                        \
+  xcb/xml/glx.xml                         \
+  xcb/xml/record.xml                      \
+  xcb/xml/res.xml                         \
+  xcb/xml/screensaver.xml                 \
+  xcb/xml/shm.xml                         \
+  xcb/xml/sync.xml                        \
+  xcb/xml/xevie.xml                       \
+  xcb/xml/xf86dri.xml                     \
+  xcb/xml/xf86vidmode.xml                 \
+  xcb/xml/xinerama.xml                    \
+  xcb/xml/xinput.xml                      \
+  xcb/xml/xkb.xml                         \
+  xcb/xml/xselinux.xml                    \
+  xcb/xml/xtest.xml                       \
+  xcb/xml/xv.xml                          \
+  xcb/xml/xvmc.xml                        \
   xcb/event-loop.scm

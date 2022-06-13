@@ -187,7 +187,7 @@ module with procedures and syntax for running an event loop. @xref{The
 Event Loop}.
 
 Extensions to the X protocol are found in modules named using the
-format @code{(xcb xml ext @var{extension-name})}. @xref{Using
+format @code{(xcb xml @var{extension-name})}. @xref{Using
 Extensions}. @var{extension-name} can be one of the following:
 
 @code{bigreq}, @code{composite}, @code{damage}, @code{dpms},
