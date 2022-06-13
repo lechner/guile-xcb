@@ -13,15 +13,15 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml type)
+(define-module (xcb type)
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-1)
   #:use-module (rnrs bytevectors)
   #:use-module (ice-9 binary-ports)
   #:use-module (ice-9 receive)
   #:use-module (srfi srfi-9 gnu)
-  #:use-module (xcb xml enum)
-  #:use-module (xcb xml records)
+  #:use-module (xcb enum)
+  #:use-module (xcb records)
   #:export (list-type mock-new-xid typed-value-pack typed-value-unpack))
 
 ;; Some xcb structs are a little too optimistic about how many bytes

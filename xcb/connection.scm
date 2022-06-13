@@ -13,7 +13,7 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml connection)
+(define-module (xcb connection)
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-1)
   #:use-module (srfi srfi-2)
@@ -22,8 +22,8 @@
   #:use-module (ice-9 binary-ports)
   #:use-module (ice-9 receive)
   #:use-module (rnrs bytevectors)
-  #:use-module (xcb xml struct)
-  #:use-module (xcb xml type)
+  #:use-module (xcb struct)
+  #:use-module (xcb type)
   #:export (xcb-connection-last-xid
             xcb-connection?
             xcb-connection-buffer-port

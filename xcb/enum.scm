@@ -13,9 +13,9 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml enum)
+(define-module (xcb enum)
   #:use-module (srfi srfi-9)
-  #:use-module (xcb xml records)
+  #:use-module (xcb records)
   #:use-module (srfi srfi-9 gnu))
 
 (define-public (make-xcb-enum name)

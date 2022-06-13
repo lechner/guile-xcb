@@ -13,17 +13,17 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml switch-test)
+(define-module (xcb switch-test)
   #:use-module (srfi srfi-64)
   #:use-module (sxml simple)
   #:use-module (ice-9 binary-ports)
   #:use-module (ice-9 receive)
-  #:use-module (xcb xml struct)
-  #:use-module (xcb xml records)
-  #:use-module (xcb xml connection)
+  #:use-module (xcb struct)
+  #:use-module (xcb records)
+  #:use-module (xcb connection)
   #:use-module (system base compile)
-  #:use-module (xcb xml type)
-  #:use-module (xcb xml enum)
+  #:use-module (xcb type)
+  #:use-module (xcb enum)
   #:use-module (ice-9 pretty-print)
   #:use-module (language scheme spec)
   #:use-module (language xml-xcb spec))

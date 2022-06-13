@@ -13,7 +13,7 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml doc)
+(define-module (xcb doc)
   #:use-module (srfi srfi-2))
 
 (define-public (empty-xcb-doc) (make-hash-table))

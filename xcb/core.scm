@@ -13,17 +13,17 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml core)
+(define-module (xcb core)
   #:use-module (srfi srfi-1)
-  #:use-module (xcb xml connection)
+  #:use-module (xcb connection)
   #:use-module (rnrs bytevectors)
   #:use-module ((rnrs base) #:select (vector-map))
-  #:use-module (xcb xml type)
-  #:use-module (xcb xml enum)
+  #:use-module (xcb type)
+  #:use-module (xcb enum)
   #:use-module (xcb xml xproto)
-  #:use-module ((xcb xml records)
+  #:use-module ((xcb records)
                 #:select (xcb-type-name xcb-type-list? make-typed-value typed-value?))
-  #:use-module (xcb xml struct))
+  #:use-module (xcb struct))
 
 (define-public (bv->xcb-string bv)
   (let ((vec (make-vector (bytevector-length bv))))

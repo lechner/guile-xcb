@@ -13,7 +13,7 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml struct)
+(define-module (xcb struct)
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-42)
   #:use-module (srfi srfi-9 gnu)
@@ -21,10 +21,10 @@
   #:use-module (srfi srfi-2)
   #:use-module (ice-9 curried-definitions)
   #:use-module (ice-9 binary-ports)
-  #:use-module (xcb xml type)
-  #:use-module (xcb xml union)
-  #:use-module (xcb xml records)
-  #:use-module (xcb xml enum)
+  #:use-module (xcb type)
+  #:use-module (xcb union)
+  #:use-module (xcb records)
+  #:use-module (xcb enum)
   #:use-module ((rnrs bytevectors) #:select (bytevector-length))
   #:use-module ((rnrs base) #:select (vector-for-each vector-map))
   #:export (define-xcb-struct clone-xcb-struct

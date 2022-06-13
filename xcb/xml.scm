@@ -19,7 +19,7 @@
 ;; the Guile XCB implementation of the X protocol.
 
 (define-module (xcb xml)
-  #:use-module ((xcb xml connection)
+  #:use-module ((xcb connection)
                 #:select (xcb-connected?
                           xcb-connection-setup
                           xcb-connection-has-extension?
@@ -31,10 +31,10 @@
                           current-xcb-connection
                           xcb-disconnect!
                           poll-xcb-connection))
-  #:use-module ((xcb xml doc) #:select (document-full document-brief))
-  #:use-module ((xcb xml auth) #:select (xcb-connect!))
-  #:use-module ((xcb xml struct) #:select (xcb-struct-fields xcb-struct-name))
-  #:use-module ((xcb xml core)
+  #:use-module ((xcb doc) #:select (document-full document-brief))
+  #:use-module ((xcb auth) #:select (xcb-connect!))
+  #:use-module ((xcb struct) #:select (xcb-struct-fields xcb-struct-name))
+  #:use-module ((xcb core)
                 #:select (make-new-xid
                           xref
                           xcb=
@@ -44,11 +44,11 @@
                           update-xid-range!
                           xcb-event->vector
                           make-xid))
-  #:use-module ((xcb xml union) #:select (xunion-ref))
-  #:use-module ((xcb xml enum) #:select (xenum-or xenum-ref xenum-key-ref
+  #:use-module ((xcb union) #:select (xunion-ref))
+  #:use-module ((xcb enum) #:select (xenum-or xenum-ref xenum-key-ref
                                                   xenum-keys xenum-values))
-  #:use-module (xcb xml type)
-  #:use-module ((xcb xml records) #:select (make-typed-value typed-value-value))
+  #:use-module (xcb type)
+  #:use-module ((xcb records) #:select (make-typed-value typed-value-value))
   #:re-export (make-xid
                poll-xcb-connection
                xcb-event->vector

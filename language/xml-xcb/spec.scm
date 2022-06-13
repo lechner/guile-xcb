@@ -23,8 +23,8 @@
 
 (define (make-default-environment)
   (let ((m (make-fresh-user-module)))
-    (module-use! m (resolve-interface '(xcb xml struct)))
-    (module-use! m (resolve-interface '(xcb xml union)))
+    (module-use! m (resolve-interface '(xcb struct)))
+    (module-use! m (resolve-interface '(xcb union)))
     m))
 
 (define element-precedence

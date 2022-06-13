@@ -13,12 +13,12 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml union)
+(define-module (xcb union)
   #:use-module (ice-9 binary-ports)
   #:use-module (rnrs bytevectors)
   #:use-module (srfi srfi-1)
-  #:use-module (xcb xml type)
-  #:use-module (xcb xml records)
+  #:use-module (xcb type)
+  #:use-module (xcb records)
   #:use-module (srfi srfi-9)
   #:use-module (ice-9 receive)
   #:export (define-xcb-union))

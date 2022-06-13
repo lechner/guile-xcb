@@ -25,7 +25,7 @@
   #:use-module (ice-9 receive)
   #:use-module (ice-9 control)
   #:use-module (srfi srfi-9)
-  #:use-module (xcb xml connection)
+  #:use-module (xcb connection)
   #:use-module (xcb xml)
   #:use-module ((xcb xml xproto) #:select (query-extension))
   #:use-module (flow event-loop)

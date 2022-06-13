@@ -13,7 +13,7 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml test)
+(define-module (xcb test)
   #:use-module (srfi srfi-1)
   #:use-module (srfi srfi-64)
   #:use-module (sxml simple)
@@ -24,13 +24,13 @@
   #:use-module (system base compile)
   #:use-module (language xml-xcb spec)
   #:use-module (language scheme spec)
-  #:use-module (xcb xml type)
-  #:use-module (xcb xml enum)
-  #:use-module (xcb xml union)
-  #:use-module (xcb xml core)
-  #:use-module ((xcb xml records) #:select (make-typed-value typed-value-value))
-  #:use-module (xcb xml connection)
-  #:use-module (xcb xml struct))
+  #:use-module (xcb type)
+  #:use-module (xcb enum)
+  #:use-module (xcb union)
+  #:use-module (xcb core)
+  #:use-module ((xcb records) #:select (make-typed-value typed-value-value))
+  #:use-module (xcb connection)
+  #:use-module (xcb struct))
 
 (define (test-reader string)
   (xml->sxml string #:trim-whitespace? #t))

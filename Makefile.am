@@ -21,7 +21,7 @@
 
 AUTOMAKE_OPTIONS = -Wno-portability
 
-%.go : %.xml language/xml-xcb/compile-scheme.go language/xml-xcb/spec.go xcb/xml/records.go
+%.go : %.xml language/xml-xcb/compile-scheme.go language/xml-xcb/spec.go xcb/records.go
 	GUILE_FLAGS="-C ${CURDIR}" @GUILE_TOOLS@ compile $< --from=xml-xcb --output=$@
 
 %.go : %.scm
@@ -39,23 +39,23 @@ godir=$(libdir)/guile/$(GUILE_EFFECTIVE_VERSION)/site-ccache
 
 nobase_go_DATA =                          \
   flow/event-loop.go                      \
-  xcb/xml/records.go                      \
-  xcb/xml/enum.go                         \
-  xcb/xml/type.go                         \
+  xcb/records.go                          \
+  xcb/enum.go                             \
+  xcb/type.go                             \
   language/xml-xcb/support.go             \
-  xcb/xml/union.go                        \
-  xcb/xml/struct.go                       \
-  xcb/xml/doc.go                          \
-  xcb/xml/connection.go                   \
+  xcb/union.go                            \
+  xcb/struct.go                           \
+  xcb/doc.go                              \
+  xcb/connection.go                       \
   language/xml-xcb/compile-scheme.go      \
   language/xml-xcb/spec.go                \
   xcb/xml/xproto.go                       \
-  xcb/xml/core.go                         \
-  xcb/xml/extension-support.go            \
+  xcb/core.go                             \
+  xcb/extension-support.go                \
   xcb/xml/ext/bigreq.go                   \
   xcb/xml/ext/ge.go                       \
   xcb/xml/ext/xc_misc.go                  \
-  xcb/xml/auth.go                         \
+  xcb/auth.go                             \
   xcb/xml.go                              \
   xcb/xml/ext/render.go                   \
   xcb/xml/ext/randr.go                    \
@@ -85,28 +85,28 @@ nobase_go_DATA =                          \
 
 nobase_mod_DATA =                    \
   flow/event-loop.scm                     \
-  xcb/xml/records.scm                     \
-  xcb/xml/enum.scm                        \
-  xcb/xml/type.scm                        \
+  xcb/records.scm                         \
+  xcb/enum.scm                            \
+  xcb/type.scm                            \
   language/xml-xcb/support.scm            \
-  xcb/xml/union.scm                       \
-  xcb/xml/struct.scm                      \
-  xcb/xml/doc.scm                         \
-  xcb/xml/test.scm                        \
-  xcb/xml/switch-test.scm                 \
+  xcb/union.scm                           \
+  xcb/struct.scm                          \
+  xcb/doc.scm                             \
+  xcb/test.scm                            \
+  xcb/switch-test.scm                     \
   xcb/sample/tinywm.scm                   \
   xcb/sample/randr.scm                    \
   xcb/sample/win.scm                      \
-  xcb/xml/connection.scm                  \
+  xcb/connection.scm                      \
   language/xml-xcb/compile-scheme.scm     \
   language/xml-xcb/spec.scm               \
   xcb/xml/xproto.xml                      \
-  xcb/xml/core.scm                        \
-  xcb/xml/extension-support.scm           \
+  xcb/core.scm                            \
+  xcb/extension-support.scm               \
   xcb/xml/ext/bigreq.xml                  \
   xcb/xml/ext/ge.xml                      \
   xcb/xml/ext/xc_misc.xml                 \
-  xcb/xml/auth.scm                        \
+  xcb/auth.scm                            \
   xcb/xml.scm                             \
   xcb/xml/ext/render.xml                  \
   xcb/xml/ext/randr.xml                   \

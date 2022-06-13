@@ -13,7 +13,7 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb xml auth)
+(define-module (xcb auth)
   #:use-module (ice-9 receive)
   #:use-module (ice-9 regex)
   #:use-module (ice-9 binary-ports)
@@ -21,9 +21,9 @@
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-1)
   #:use-module (xcb xml xproto)
-  #:use-module (xcb xml struct)
-  #:use-module (xcb xml core)
-  #:use-module (xcb xml connection)
+  #:use-module (xcb struct)
+  #:use-module (xcb core)
+  #:use-module (xcb connection)
   #:export (xcb-connect!))
 
 (define (xcb-get-auths)
