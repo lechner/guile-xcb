@@ -11,7 +11,10 @@ AM_SILENT_RULES([yes])
 
 GUILE_PKG([3.0 2.2 2.0])
 GUILE_PROGS
-GUILE_SITE_DIR
+
+# until GUILE_SITE_DIR is fixed
+AC_SUBST([GUILE_SITE], [${prefix}/share/guile/site/${GUILE_EFFECTIVE_VERSION}])
+AC_SUBST([GUILE_SITE_CCACHE], [${libdir}/guile/${GUILE_EFFECTIVE_VERSION}/site-ccache])
 
 AC_CONFIG_FILES([
         Makefile
