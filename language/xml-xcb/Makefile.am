@@ -21,7 +21,9 @@
 ##   Street, Fifth Floor, Boston, MA 02110-1301 USA
 
 %.go : %.scm
-	@GUILE_TOOLS@ compile $< --output=$@ -L "@abs_top_srcdir@"
+	GUILE_LOAD_PATH="@abs_top_srcdir@":$$GUILE_LOAD_PATH \
+	  GUILE_LOAD_COMPILED_PATH="@abs_top_srcdir@":$$GUILE_LOAD_COMPILED_PATH \
+	    @GUILE_TOOLS@ compile $< --output=$@
 
 CLEANFILES = *.go
 

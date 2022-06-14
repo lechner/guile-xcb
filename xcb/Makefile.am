@@ -23,7 +23,9 @@
 SUBDIRS = xml sample
 
 %.go : %.scm
-	@GUILE_TOOLS@ compile $< --output=$@ -L "@abs_top_srcdir@"
+	GUILE_LOAD_PATH="@abs_top_srcdir@":$$GUILE_LOAD_PATH \
+	  GUILE_LOAD_COMPILED_PATH="@abs_top_srcdir@":$$GUILE_LOAD_COMPILED_PATH \
+	    @GUILE_TOOLS@ compile $< --output=$@
 
 CLEANFILES = *.go
 
