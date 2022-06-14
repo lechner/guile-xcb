@@ -13,18 +13,18 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb type)
+(define-module (language xml-xcb type)
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-1)
   #:use-module (rnrs bytevectors)
   #:use-module (ice-9 binary-ports)
   #:use-module (ice-9 receive)
   #:use-module (srfi srfi-9 gnu)
-  #:use-module (xcb enum)
-  #:use-module (xcb records)
+  #:use-module (language xml-xcb enum)
+  #:use-module (language xml-xcb records)
   #:export (list-type mock-new-xid typed-value-pack typed-value-unpack))
 
-;; Some xcb structs are a little too optimistic about how many bytes
+;; Some language xml-xcb structs are a little too optimistic about how many bytes
 ;; they expect to read from the server. Rather than keeping track of
 ;; total bytes read and immediately stopping when we reach the length
 ;; the server said it would sent, we'll just fill in the remaining

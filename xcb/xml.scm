@@ -33,7 +33,7 @@
                           poll-xcb-connection))
   #:use-module ((xcb doc) #:select (document-full document-brief))
   #:use-module ((xcb auth) #:select (xcb-connect!))
-  #:use-module ((xcb struct) #:select (xcb-struct-fields xcb-struct-name))
+  #:use-module ((language xml-xcb struct) #:select (xcb-struct-fields xcb-struct-name))
   #:use-module ((xcb core)
                 #:select (make-new-xid
                           xref
@@ -44,11 +44,11 @@
                           update-xid-range!
                           xcb-event->vector
                           make-xid))
-  #:use-module ((xcb union) #:select (xunion-ref))
-  #:use-module ((xcb enum) #:select (xenum-or xenum-ref xenum-key-ref
+  #:use-module ((language xml-xcb union) #:select (xunion-ref))
+  #:use-module ((language xml-xcb enum) #:select (xenum-or xenum-ref xenum-key-ref
                                                   xenum-keys xenum-values))
-  #:use-module (xcb type)
-  #:use-module ((xcb records) #:select (make-typed-value typed-value-value))
+  #:use-module (language xml-xcb type)
+  #:use-module ((language xml-xcb records) #:select (make-typed-value typed-value-value))
   #:re-export (make-xid
                poll-xcb-connection
                xcb-event->vector

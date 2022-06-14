@@ -21,7 +21,7 @@
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-1)
   #:use-module (xcb xml xproto)
-  #:use-module (xcb struct)
+  #:use-module (language xml-xcb struct)
   #:use-module (xcb core)
   #:use-module (xcb connection)
   #:export (xcb-connect!))

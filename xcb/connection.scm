@@ -22,8 +22,8 @@
   #:use-module (ice-9 binary-ports)
   #:use-module (ice-9 receive)
   #:use-module (rnrs bytevectors)
-  #:use-module (xcb struct)
-  #:use-module (xcb type)
+  #:use-module (language xml-xcb struct)
+  #:use-module (language xml-xcb type)
   #:export (xcb-connection-last-xid
             xcb-connection?
             xcb-connection-buffer-port

@@ -18,7 +18,7 @@
 ;;; want to invalidate all the compiled xml-xcb files (that's why
 ;;; these are all kept in one place)
 
-(define-module (xcb records)
+(define-module (language xml-xcb records)
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-9 gnu)
   #:export (xcb-case-expression-expression

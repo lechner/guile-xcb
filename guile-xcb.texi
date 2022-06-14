@@ -261,10 +261,10 @@ for a field that ends in ``_len'' are computed internally}. The last field,
 a list with name @code{reason}, is represented as a vector.
 
 @deffn {Scheme Procedure} make-setup-failed status protocol_major_version protocol_minor_version length reason
-Create an xcb struct of type @code{setup-failed}.
+Create a language xml-xcb struct of type @code{setup-failed}.
 @end deffn
 
-Fields of an xcb structure instance can be accessed using the
+Fields of a language xml-xcb structure instance can be accessed using the
 procedure @code{xref}.
 
 @deffn {Scheme Procedure} xref rec field | rec field n
@@ -300,8 +300,8 @@ any do not. @xref{Types}. Some fields require that a value belong to a
 specific enum or mask; their values are specified with symbols rather
 than integer values. @xref{Enums and Masks}.
 
-On some occasions, it is useful to inspect the name and fields of an
-xcb struct.
+On some occasions, it is useful to inspect the name and fields of a
+language xml-xcb struct.
 
 @deffn{Scheme Procedure} xcb-struct-name struct-type
 
@@ -392,7 +392,7 @@ the value of one of the fields, that single value is converted from
 raw bytes to the appropriate field's representation.
 
 @deffn {Scheme Procedure} xunion-ref rec field
-Return the data in xcb union instance @var{rec} represented as a value
+Return the data in language xml-xcb union instance @var{rec} represented as a value
 conforming to the specification of @var{field}.
 @end deffn
 @end itemize
@@ -452,7 +452,7 @@ nevertheless require values logior'd together, the procedure
 @code{xenum-or} is available:
 
 @deffn {Scheme Procedure} xenum-or enum . keys
-Return the values associated with @var{keys} in xcb enum @var{enum}
+Return the values associated with @var{keys} in language xml-xcb enum @var{enum}
 combined with @code{logior}.
 @end deffn
 
@@ -778,7 +778,7 @@ sequence number, it is included as one of the fields of the XCB struct
 itself.
 @end deffn
 
-A reply from the X server uses an xcb struct with a name in the form
+A reply from the X server uses a language xml-xcb struct with a name in the form
 @code{@var{request-name}-reply}, such as @code{query-extension-reply}
 or @code{get-window-attributes-reply}.
 

@@ -33,6 +33,11 @@ moduledir=$(GUILE_SITE)/$(destination)
 bytecodedir=$(GUILE_SITE_CCACHE)/$(destination)
 
 bytecode_DATA =                    \
+  records.go                       \
+  enum.go                          \
+  type.go                          \
+  union.go                         \
+  struct.go                        \
   support.go                       \
   compile-scheme.go                \
   spec.go

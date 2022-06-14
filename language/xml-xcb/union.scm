@@ -13,12 +13,12 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb union)
+(define-module (language xml-xcb union)
   #:use-module (ice-9 binary-ports)
   #:use-module (rnrs bytevectors)
   #:use-module (srfi srfi-1)
-  #:use-module (xcb type)
-  #:use-module (xcb records)
+  #:use-module (language xml-xcb type)
+  #:use-module (language xml-xcb records)
   #:use-module (srfi srfi-9)
   #:use-module (ice-9 receive)
   #:export (define-xcb-union))
@@ -127,7 +127,7 @@
 
 (define-public (xunion-ref rec field)
   "-- Scheme Procedure: xunion-ref rec field
-     Return the data in xcb union instance REC represented as a
+     Return the data in language xml-xcb union instance REC represented as a
      value conforming to the specification of FIELD."
   (define xcb-union ((record-accessor (record-type-descriptor rec) 'xcb-union-type) rec))
   (define type (hashq-ref (xcb-union-types xcb-union) field))

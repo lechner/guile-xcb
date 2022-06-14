@@ -15,9 +15,9 @@
 
 (define-module (xcb extension-support)
   #:use-module (xcb connection)
-  #:use-module (xcb type)
+  #:use-module (language xml-xcb type)
   #:use-module ((xcb core) #:select (xref))
-  #:use-module ((xcb records) #:select (make-typed-value)))
+  #:use-module ((language xml-xcb records) #:select (make-typed-value)))
 
 (define-public (enable-extension xcb-conn name set-opcode! events errors reply)
   (define (enable)

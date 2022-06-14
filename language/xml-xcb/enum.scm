@@ -13,9 +13,9 @@
  ;;    You should have received a copy of the GNU General Public License
  ;;    along with Guile XCB.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (xcb enum)
+(define-module (language xml-xcb enum)
   #:use-module (srfi srfi-9)
-  #:use-module (xcb records)
+  #:use-module (language xml-xcb records)
   #:use-module (srfi srfi-9 gnu))
 
 (define-public (make-xcb-enum name)
@@ -47,7 +47,7 @@
 
 (define-public (xenum-or enum . keys)
   "-- Scheme Procedure: xenum-or enum . keys
-     Return the values associated with KEYS in xcb enum ENUM combined
+     Return the values associated with KEYS in language xml-xcb enum ENUM combined
      with `logior'."
   (apply logior (map (lambda (value) (xenum-ref enum value)) keys)))
 
